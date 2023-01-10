@@ -178,7 +178,7 @@ section:nth-child(even) { /* puts the method section on the right hand side */
 
 section div.ingredients_list {
     width: 25%;
-    height: 0vh;
+    height: 100%;
     padding-right: 25px;
     position: sticky; /* makes ingredeints list stick */
     position: -webkit-sticky; /* makes ingredeints list stick (same as above but for differetn browsers)*/

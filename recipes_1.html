@@ -1,0 +1,65 @@
+<!DOCTYPE html> <!-- tell the browser it's a html file -->
+<html> <!-- tell the browser where the html code is -->
+<head> <!-- head is where the extra info goes -->
+    <link href = "mystyle.css" rel = "stylesheet" type = "text/css"> <!-- tells the file where the css file is located -->
+    <meta charset = "UTF-8"> <!-- this is the most common charset -->
+    <meta name = "author" content = 'Regan'>
+    <title>SimpleChef</title>
+</head>
+
+<body>
+<!--creates the header, this should be the same on every page-->
+<header>
+    <div class = "container-home">
+        <img src = "logo.png" alt = "logo" class = "logo_head" width = "50" height = "50">
+        <nav>
+            <ul>
+                <li><a href = "home.html">Home</a></li> <!--need to add links-->
+                <li><a href = "recipes_1.html">Recipes</a></li> <!--need to add links-->
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class = "container"> <!-- will hold the page content in place so that they don't fill the whole screen -->
+    <h1>Recipes</h1> <!-- page title -->
+    <span class = "line"></span>
+
+    <a href = "chilli_con_carne.html">
+        <recipe_preview_left> <!-- each individual one of these is a recipe preview section (alternate between recipe_preview left and recipe_preview_right )-->
+            <h2>Chilli Con Carne</h2>
+            <img class = "img_recipe_preview" src = "https://www.hairybikers.com/uploads/images/_recipeImage/ChilliConCarne.jpg" alt = "">
+            <p>Chilli Con Carne is a traditional hearty mexican meal, which is perfect for a get together with friends and family. It also heats up beautifully so is a great option as a batch cooked meal.</p>
+        </recipe_preview_left>
+    </a>
+
+    <a href = "chicken_chorizo_rissoto.html">
+        <recipe_preview_right>
+            <h2>Chicken and Chorizo Rissoto</h2>
+            <img class = "img_recipe_preview" src = "https://whereismyspoon.co/wp-content/uploads/2021/04/chicken-chorizo-paella-02.jpg" alt = "">
+            <p>Chicken and chorizo risotto is creamy, delicious and very easy to make. It has golden bits of chicken thighs, flavourful slices of chorizo and plenty of Parmesan for a perfectly comforting meal.</p>
+        </recipe_preview_right>
+    </a>
+
+    <a href = "pork_belly_bites_with_apple_purée.html">
+        <recipe_preview_left>
+            <h2>Pork Belly Bites with Apple Purée</h2>
+            <img class = "img_recipe_preview" src = "https://img.delicious.com.au/tkYSJ8P4/w1200/del/2020/08/crispy-pork-belly-with-apple-sauce-137923-2.jpg" alt = "">
+            <p>SimpleChef to Masterchef, this recipe is a bit fancy. Don't be put off by this recipe is actual really simple, but is one to make with a bit more time on your hands. Dauphinoise potatoes are a great accomplishment.</p>
+        </recipe_preview_left>
+    </a>
+
+    <a href = "spaghetti_carbonara.html">
+        <recipe_preview_right>
+            <h2>Spaghetti Carbonara</h2>
+            <img class = "img_recipe_preview" src = "https://www.thespruceeats.com/thmb/ovIQQQxQajADuIE2lqhgqq7ppyE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/pasta-carbonara-recipe-5210168-hero-01-80090e56abc04ca19d88ebf7fad1d157.jpg" alt = "">
+            <p>This cheesy pasta dish is an Italian favourite, with just a few ingriedients you can discover the taste of Italy. Once you have the technique down, this is a recipe you can basically repeat from memory.</p>
+        </recipe_preview_right>
+    </a>
+</div>
+
+<footer>
+    <img src = "logo_full.png" alt = "logo" class = "logo_foot" width = "210" height = "70">
+</footer>
+</body>
+</html>

@@ -1,0 +1,211 @@
+/* test area */
+
+
+
+
+
+/* Anything under here works and has a purpose */
+
+:root{ /* custom variables */
+    --sc_green: #4A8522; /* to use 'var(--sc_green)' */
+    --sc_black: #333; /* to use 'var(--sc_black)' */
+}
+
+/* add background colour */
+body {
+    margin: 0;
+    /* background: whitesmoke; */
+    font-family: "" /* can choose font from https://www.cssfontstack.com/ */
+} 
+
+/* reduces how much of the screen is used */
+.container-home {
+    width: 80%;
+    margin: 0 auto;
+} 
+
+/* adds extra room above the titles of the recipe pages */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 40px;
+} 
+
+/* controls header look*/
+header {
+    background: var(--sc_black);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 0px;
+    position: sticky; /* keeps header fixed at the top of the page */
+    top: 0; /* keeps header fixed at the top of the page */
+    z-index: 999; /* keeps header fixed at the top of the page */
+}
+
+/* fixes the issue of the header disappearing when using floats */
+header::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/* controls footer look */
+footer {
+    background: var(--sc_black);
+    clear: both;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+/* puts logo to the left of the header bar */
+.logo_head {
+    float: left;
+    padding: 2px 0;
+}
+
+/* controls logo in footer */
+.logo_foot {
+    padding: 2px 0;    
+} 
+
+/* nav relates to the nav I set up in the main document (navigation bar) */
+nav {
+    float: left;
+}
+
+nav ul {
+   margin : 0;
+   padding: 0;
+   list-style: none;
+}
+
+/* make list horizontal not vertical */
+nav li {
+    display: inline-block;
+    margin-left: 40px; /* change size of gaps between navigation tabs */
+    padding-top: 15px;
+    position: relative; /* helps with the boxes above the tabs when hover */
+}
+
+/* change colour of text in navigation bar */
+nav a {
+    color: var(--sc_green);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+/* change colour of text in navigation bar when hovered over */
+nav a:hover {
+    color: whitesmoke
+}
+
+/* before means in the link before the text */
+nav a::before {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: whitesmoke;
+
+    position: absolute;
+    top: 0;
+    width: 0%; /* don't want to see the blocks unloess hovered */
+    
+    transition: all ease-in-out 250ms; /* makes hover less flickery */
+}
+
+/* allows block to show in navigation bar on hover */
+nav a:hover::before {
+    width: 100%
+}
+
+recipe_preview_left { /* controls left hand side previews */
+    float: left;
+    width: 46%; /* not 50% so there is a gap between sections */
+    margin-bottom: 40px; /* controls distance between vertical previews (left and right needs to be same values */
+    
+}
+
+recipe_preview_right { /* controls right hand side previews */
+    float: right;
+    width: 46%; /* not 50% so there is a gap between sections */
+    margin-bottom: 40px; /* controls distance between vertical previews (left and right needs to be same values */
+}
+
+.line { /* add line to website */
+    border-bottom: 0.5px solid var(--sc_black);
+    display: block;
+    margin-bottom: 30px;
+}
+
+.img_recipe_preview { /* controls the image size in the preview */
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+/* The below 3 'a's controls how you select to view a recipe */
+a { /* the look of the selection in it's natural un hovered state */
+    background-color: transparent;
+    color: black;
+    text-decoration: none
+}
+
+a:active {
+    outline: 0;
+}
+
+a:hover { /* controls what happens when you hover over each recipe */
+    outline: 0;
+    color: #23527c;
+    text-decoration: underline;
+    width: 100%;
+    content: '';
+    display: block;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 50px;
+}
+
+section:nth-child(even) { /* puts the method section on the right hand side */
+    flex-direction: row-reverse;
+}
+
+section div.ingredients_list {
+    width: 25%;
+    height: 100%; /* stops the sticky at the end of container i.e., footer doesn't overlap content */
+    padding-right: 25px;
+    position: sticky; /* makes ingredeints list stick */
+    position: -webkit-sticky; /* makes ingredeints list stick (same as above but for differetn browsers)*/
+    top: 10%; /* makes ingredeints list stick */
+}
+
+section div.method { 
+    width: 70%;
+    padding-left: 25px;
+}
+
+/*looks after the home page visual*/
+home-visual {
+    background-color: bisque;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+/*makes sure the logo on the home screen visual stays looking good*/
+home-visual img {
+    width: 90%;
+    height: 100%;
+    object-fit: cover;
+}
+
+

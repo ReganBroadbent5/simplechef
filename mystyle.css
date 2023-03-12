@@ -125,13 +125,18 @@ recipe_preview_left { /* controls left hand side previews */
     float: left;
     width: 46%; /* not 50% so there is a gap between sections */
     margin-bottom: 40px; /* controls distance between vertical previews (left and right needs to be same values */
-    
 }
 
 recipe_preview_right { /* controls right hand side previews */
     float: right;
     width: 46%; /* not 50% so there is a gap between sections */
     margin-bottom: 40px; /* controls distance between vertical previews (left and right needs to be same values */
+}
+
+recipe_preview_centre { /* makes sure the length of recipe description doesn't mess up left and right alignment */
+    float: left;
+    width: 100%; /* 100% so it forces next sections below it */
+    margin-bottom: 0px; /* allows it to show nothing  */
 }
 
 .line { /* add line to website */
@@ -147,17 +152,17 @@ recipe_preview_right { /* controls right hand side previews */
 }
 
 /* The below 3 'a's controls how you select to view a recipe */
-a { /* the look of the selection in it's natural un hovered state */
+a.recipe { /* the look of the selection in it's natural un hovered state */
     background-color: transparent;
     color: black;
     text-decoration: none
 }
 
-a:active {
+a.recipe:active {
     outline: 0;
 }
 
-a:hover { /* controls what happens when you hover over each recipe */
+a.recipe:hover { /* controls what happens when you hover over each recipe */
     outline: 0;
     color: #23527c;
     text-decoration: underline;
@@ -208,4 +213,23 @@ home-visual img {
     object-fit: cover;
 }
 
+.pagination { /* controls the page numbers */
+    display: inline-block;
+    padding-bottom: 40px;
+}
+  
+.pagination a { /* controls the page numbers link */
+    color: var(--sc_black);
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 5px;
+}
 
+.pagination a.active {  /* changes the look of the button that is the active page */
+    background-color: var(--sc_green);
+    color: white;
+    border-radius: 5px;
+}
+  
+.pagination a:hover:not(.active) {background-color: #ddd;} /* controls what happens when you hover over non active buttons */

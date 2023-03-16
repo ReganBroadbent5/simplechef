@@ -4,6 +4,8 @@
 
 
 
+
+
 /* Anything under here works and has a purpose */
 
 :root{ /* custom variables */
@@ -233,3 +235,73 @@ home-visual img {
 }
   
 .pagination a:hover:not(.active) {background-color: #ddd;} /* controls what happens when you hover over non active buttons */
+
+.search_bar{ /* positions the search bar in the top right corner */
+    float: right;
+    margin-top: 12px;
+    margin-right: 10%;
+    display: flex;
+    align-content: center;
+}
+
+.style-search_bar{ /* controls the surroundings of search bar */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border: 1px gray solid;
+    border-radius: 15px;
+}
+
+.search_bar input{ /* controls the insides of the search bar */
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    color: white;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+::placeholder{
+    color: grey /* controls the colour of the search bar text before anything is typed*/
+}
+
+.search_bar button{ /* controls the button clciked to search  */
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    color: white;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.search_bar button img{ /* controls the button clicked to search */
+    height: 23px;
+}
+
+.hidden-search { /* makes the search bar contents hidden when nothing typed */
+    display: none;
+}
+ 
+#myUL {  /* controls the style of search content */
+    /* Remove default list styling */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+  
+#myUL li a { /* controls the style of search content */
+    border: 1px solid #ddd; /* Add a border to all links */
+    margin-top: -1px; /* Prevent double borders */
+    background-color: #f6f6f6; /* Grey background color */
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove default text underline */
+    font-size: 18px; /* Increase the font-size */
+    color: black; /* Add a black text color */
+    display: block; /* Make it into a block element to fill the whole list */
+}
+  
+#myUL li a:hover:not(.header) { /* add hover to selectd links */
+    background-color: #eee;
+}

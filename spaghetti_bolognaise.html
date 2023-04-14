@@ -2,6 +2,7 @@
 <html> <!-- tell the browser where the html code is -->
 <head> <!-- head is where the extra info goes -->
     <link href = "mystyle.css" rel = "stylesheet" type = "text/css"> <!-- tells the file where the css file is located -->
+    <script src = "myjavascript.js" type = "text/javascript"></script>
     <meta charset = "UTF-8"> <!-- this is the most common charset -->
     <meta name = "author" content = 'Regan'>
     <title>SimpleChef - Spaghetti Carbonara</title>
@@ -20,12 +21,24 @@
         </nav>
     </div>
     <div class = "search_bar">
-        <form action = "" class = "style-search_bar">
-            <input type = "text" placeholder = "Search recipes...">
-            <button type = "submit"><img src = "search.png"></button>
+        <form action = "" class = "style-search_bar" autocomplete = "off">
+            <input type = "text" id = "search_input" onkeyup = "search_function()" placeholder = "Search recipes...">
+            <button type = ""><img src = "search.png"></button>
         </form>
     </div>
 </header>
+
+<ul class = "hidden-search" id = "myUL">
+    <li><a href = "chicken_chorizo_rissoto.html">Chicken and Chorizo Risotto</a></li>
+    <li><a href = "chicken_tikka_masala.html">Chicken Tikka Masala</a></li>
+    <li><a href = "chilli_con_carne.html">Chilli Con Carne</a></li>
+    <li><a href = "green_pesto_pasta.html">Green Pesto Pasta</a></li>
+    <li><a href = "halloumi_stuffed_peppers.html">Halloumi Stuffed Peppers</a></li>
+    <li><a href = "paella.html">Paella</a></li>
+    <li><a href = "pork_belly_bites_with_apple_purée.html">Pork Belly Bites with Apple Puree</a></li>
+    <li><a href = "spaghetti_bolognaise.html">Spaghetti Bolognaise</a></li>
+    <li><a href = "spaghetti_carbonara.html">Spaghetti Carbonara</a></li>
+</ul>
 
 <div class = "container"> <!-- will hold the page content in place so that they don't fill the whole screen -->
     <h1>Spaghetti Bolognaise</h1> <!-- page title -->
@@ -39,7 +52,7 @@
             <p>
                 1x Onion
                 <br>2x Garlic Cloves
-                <br>1 x Red Wine Stock Pot
+                <br>1x Red Wine Stock Pot
                 <br>500g Beef Mince
                 <br>400g Chopped Tomatoes
                 <br>2 tbsp Tomato Purée

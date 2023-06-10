@@ -1,3 +1,4 @@
+// this function controls the search bar (it's a copy from somewhere, not 100% sure how it works)
 function search_function() {
   // Declare variables
   var input, filter, ul, li, a, i, txtValue;

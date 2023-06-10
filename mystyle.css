@@ -17,7 +17,7 @@
 body {
     margin: 0;
     /* background: whitesmoke; */
-    font-family: "" /* can choose font from https://www.cssfontstack.com/ */
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif; /* can choose font from https://www.cssfontstack.com/ */
 } 
 
 /* reduces how much of the screen is used */
